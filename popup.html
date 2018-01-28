@@ -6,23 +6,29 @@
 </head>
 <body>
 	
-	<h3>PasswordPlex</h3>
+	<div class="container">
+		<h3>PasswordPlex</h3>
 
-	<div class="option-panel">
+		<div class="option-panel">
+			
+			<a id="show-options">options...</a>
+			<ul class="option-list" style="display: none;">
+				<li><label>Symbols: <input type="checkbox"></label></li>
+				<li><label>Length: <input type="number" style="width:40px;display: inline-block;"></li>
+				<li><label>Number of passwords: <input type="number" style="width:40px;display: inline-block;"></label></li>
+			</ul>
+
+		</div>
 		
-		<a href="">options...</a>
-		<ul class="option-list" style="display:none;"></ul>
+		<div class="controllers">
+			<button id="generate_password" class="button">generate</button>
+		</div>
+
+		<div id="result-panel"></div>
 
 	</div>
-	
-	<div class="controllers">
-		<ul class="contoller-list">
-			<li><button id="generate_password">generate</button></li>
-		</ul>
-	</div>
 
-	<div id="result-panel"></div>
-
+	<script src="jsbin/stringtools.js"></script>
 	<script src="jsbin/master.js"></script>
 
 
