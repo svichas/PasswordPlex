@@ -9,6 +9,7 @@ gen_btn.addEventListener("click", function() {
 /* Showing result */
 function showResult(result="") {
 	result_panel = document.getElementById("result-panel");
+	result_panel.style.display = "block";
 	result_panel.innerHTML = result;
 }
 

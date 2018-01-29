@@ -24,6 +24,10 @@
 							<td><input type="checkbox" id="symbols_input"></td>
 						</tr>
 						<tr>
+							<td><label for="save_to_history_input">Save to history:</label></td>
+							<td><input type="checkbox" id="save_to_history_input"></td>
+						</tr>
+						<tr>
 							<td><label for="length_input">Length:</label></td>
 							<td><input type="number" id="length_input" placeholder="10" style="width:40px;"></td>
 						</tr>
@@ -40,10 +44,10 @@
 		</div>
 		
 		<div class="controllers">
-			<button id="generate_password" class="button">generate</button>
+			<button id="generate_password" class="button button-classic button-block">Generate password</button>
 		</div>
 
-		<div id="result-panel"></div>
+		<div id="result-panel" style="display: none;"></div>
 
 	</div>
 	
