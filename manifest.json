@@ -1,7 +1,7 @@
 {
 
-	"name": "passwordplex",
-	"version": "0.1",
+	"name": "PasswordPlex",
+	"version": "0.5",
 	"manifest_version": 2,
 	"description": "A chrome extension to generate secure passwords.",
 	"icons": { "128": "icon.png" },
