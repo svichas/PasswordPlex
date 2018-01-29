@@ -2,7 +2,13 @@
 /* Generate password */
 gen_btn = document.getElementById("generate_password");
 gen_btn.addEventListener("click", function() {
-	showResult(stringtools.randomString(22));
+
+	symbols = document.getElementById("symbols_input").checked;
+	length = parseInt(document.getElementById("length_input").value);
+
+	if (!length) length = 10;
+
+	showResult(stringtools.randomString(length,symbols));
 });
 
 
