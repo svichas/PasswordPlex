@@ -1,10 +1,3 @@
-show_options_btn = document.getElementById("show-options");
-show_options_btn.onclick = function(e) {
-	e.preventDefault();
-	option_list = document.querySelector(".option-list");
-	option_list.classList.toggle("show-block");
-}
-
 
 /* Generate password */
 gen_btn = document.getElementById("generate_password");
@@ -17,4 +10,29 @@ gen_btn.addEventListener("click", function() {
 function showResult(result="") {
 	result_panel = document.getElementById("result-panel");
 	result_panel.innerHTML = result;
+}
+
+
+/* Code for tabs */
+tab_buttons = document.querySelectorAll(".tab-btn");
+
+for (tab_button of tab_buttons) {
+	tab_button.onclick = function() {
+
+		for (tab_button_to_unselect of tab_buttons) {
+			tab_button_to_unselect.classList.remove("selected");
+		}
+
+		tab = document.querySelector(this.getAttribute("href"));
+		this.classList.add("selected");
+
+		// HIDE all tabs
+		tabs = document.querySelectorAll(".tab");
+		for (tab_to_hide of tabs) {
+			tab_to_hide.style.display = "none";
+		}
+
+		if (tab.style.display == "none") tab.style.display = "block"; 
+	
+	}
 }

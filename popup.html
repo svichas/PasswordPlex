@@ -9,14 +9,33 @@
 	<div class="container">
 		<h3>PasswordPlex</h3>
 
-		<div class="option-panel">
-			
-			<a id="show-options">options...</a>
-			<ul class="option-list" style="display: none;">
-				<li><label>Symbols: <input type="checkbox"></label></li>
-				<li><label>Length: <input type="number" style="width:40px;display: inline-block;"></li>
-				<li><label>Number of passwords: <input type="number" style="width:40px;display: inline-block;"></label></li>
+		<div class="tabs-wrapper">
+		
+			<ul class="tab-list">
+				<li><a href="#options" class="tab-btn selected">Options</a></li>
+				<li><a href="#history" class="tab-btn">History</a></li>
 			</ul>
+			<div class="tabs">
+				
+				<div class="tab" id="options" style="display: block;">
+					<table class="options-table">
+						<tr>
+							<td><label for="symbols_input">Symbols:</label></td>
+							<td><input type="checkbox" id="symbols_input"></td>
+						</tr>
+						<tr>
+							<td><label for="length_input">Length:</label></td>
+							<td><input type="number" id="length_input" placeholder="10" style="width:40px;"></td>
+						</tr>
+
+					</table>
+				</div>
+
+				<div class="tab" id="history" style="display: none;">
+					history tab
+				</div>
+
+			</div>
 
 		</div>
 		
@@ -27,7 +46,7 @@
 		<div id="result-panel"></div>
 
 	</div>
-
+	
 	<script src="jsbin/stringtools.js"></script>
 	<script src="jsbin/master.js"></script>
 

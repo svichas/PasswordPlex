@@ -4,8 +4,15 @@
 .button {
 
 }
-
-
+.options-table {
+	width:100%;
+}
+.options-table tr td:nth-child(1) {
+	width: 100px;
+}
+label {
+	font-size: 12px;
+}
 .show-block {
 	display: block;
 }
@@ -16,7 +23,9 @@
 	background: #f9f9f9;
 	padding: 3px;
 }
-
+.controllers {
+	margin-top: 15px;
+}
 #result-panel {
 	width: 200px;
 	background: #f0f0f0;
@@ -24,4 +33,30 @@
 	border: 1px solid #999;
 	border-radius: 2px;
 	margin: 4px 0px;
+}
+
+/* Style for tabs */
+.tab-list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.tab-list li {
+	display: inline-block;
+}
+.tab-list li a {
+	display: inline-block;
+	padding: 2px 5px;
+	text-decoration: none;
+	color: #303030;
+	background: #d0d0d0;
+	border-radius: 4px 4px 0px 0px;
+	margin-right: 5px;
+}
+.tab-list li a.selected {
+	background: #f0f0f0;
+}
+.tabs {
+	background: #f0f0f0;
+	padding: 5px;
 }
