@@ -5,10 +5,11 @@
 	min-width: 250px;
 }
 .controllers {
-	padding: 10px 0px;
 	text-align: center;
 }
-
+.row-spaced {
+	margin-top: 10px;
+}
 
 
 .options-table {
@@ -31,11 +32,12 @@ label {
 	padding: 3px;
 }
 #result-panel {
-	max-width: 100%;
+	max-width: 250px;
 	background: #f0f0f0;
 	padding: 5px;
 	border: 1px solid #999;
 	border-radius: 2px;
+	overflow-wrap: break-word;
 }
 
 /* Style for tabs */

@@ -9,11 +9,13 @@
 	<div class="container">
 		<h3>PasswordPlex</h3>
 
-		<div class="tabs-wrapper">
+		<div class="row-spaced">
+			
+			<div class="tabs-wrapper">
 		
 			<ul class="tab-list">
 				<li><a href="#options" class="tab-btn selected">Options</a></li>
-				<li><a href="#history" class="tab-btn">History</a></li>
+				<!-- <li><a href="#history" class="tab-btn">History</a></li> -->
 			</ul>
 			<div class="tabs">
 				
@@ -24,30 +26,36 @@
 							<td><input type="checkbox" id="symbols_input"></td>
 						</tr>
 						<tr>
-							<td><label for="save_to_history_input">Save to history:</label></td>
-							<td><input type="checkbox" id="save_to_history_input"></td>
-						</tr>
-						<tr>
 							<td><label for="length_input">Length:</label></td>
 							<td><input type="number" id="length_input" placeholder="10" style="width:40px;"></td>
+						</tr>
+						<tr>
+							<td><label for="password_count_input">Passwords:</label></td>
+							<td><input type="number" id="password_count_input" placeholder="1" style="width:40px;"></td>
+						</tr>
+						<tr>
+							<td><label for="costum_chars_input">Custom chars:</label></td>
+							<td><input type="text" id="costum_chars_input" placeholder="" style="width:80px;"></td>
 						</tr>
 
 					</table>
 				</div>
-
+		
 				<div class="tab" id="history" style="display: none;">
 					history tab
 				</div>
 
 			</div>
 
+			</div>
+		
 		</div>
 		
-		<div class="controllers">
+		<div class="controllers row-spaced">
 			<button id="generate_password" class="button button-classic button-block">Generate password</button>
 		</div>
 
-		<div id="result-panel" style="display: none;"></div>
+		<div class="row-spaced" id="result-panel" style="display: none;"></div>
 
 	</div>
 	

@@ -1,3 +1,5 @@
+var password_history = [];
+
 
 /* Generate password */
 gen_btn = document.getElementById("generate_password");
@@ -5,10 +7,19 @@ gen_btn.addEventListener("click", function() {
 
 	symbols = document.getElementById("symbols_input").checked;
 	length = parseInt(document.getElementById("length_input").value);
+	password_count = document.getElementById("password_count_input").value;
+	costum_chars_input = document.getElementById("costum_chars_input").value;
 
-	if (!length) length = 10;
+	if (!password_count || password_count < 1) password_count = 1;
+	if (!length || length < 1) length = 10;
 
-	showResult(stringtools.randomString(length,symbols));
+	content = "";
+	for (i=0;i<password_count;i++) {
+		if (content != "") content += "<br /><br />"; 
+		content += stringtools.randomString(length,symbols,costum_chars_input);
+	}
+
+	showResult(content);
 });
 
 
@@ -18,7 +29,6 @@ function showResult(result="") {
 	result_panel.style.display = "block";
 	result_panel.innerHTML = result;
 }
-
 
 /* Code for tabs */
 tab_buttons = document.querySelectorAll(".tab-btn");
